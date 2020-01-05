@@ -1,0 +1,24 @@
+Due to Java/AWT problem in combination with dwm I need to start MPLAB tools
+with _JAVA_AWT_WM_NONREPARENTING=1
+
+_JAVA_AWT_WM_NONREPARENTING=1 mplab_ide
+_JAVA_AWT_WM_NONREPARENTING=1 mplab_ipe
+
+
+
+mplab_ide setup:
+ - new project, "Standalone Project"
+ - device: PIC16F15313
+ - don't select a tool
+ - select xc8 compiler
+ - pick any name
+ - add main.c
+ - then symlink .c file from here to project main.c
+
+
+
+mplab_ipe setup:
+ - Device: PIC16F15313
+ - Power / VDD = 4.75V (5V might work)
+ - [x] Power Target circuit from Tool
+ - [x] Use High Voltage Program mode entry
